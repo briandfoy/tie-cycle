@@ -2,7 +2,8 @@ Changes
 Cycle.pm
 MANIFEST
 Makefile.PL
-t/00.load.t
+t/load.t
 t/cycle.t
 t/pod.t
 META.yml                                 Module meta-data (added by MakeMaker)
+README

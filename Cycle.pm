@@ -24,7 +24,7 @@ sub TIESCALAR
 sub FETCH
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0]++;
 	$$self[0] %= $self->[1];
 
@@ -41,18 +41,18 @@ sub STORE
 
 	$self = [ 0, scalar @$list_ref, $list_ref ];
 	}
-	
+
 sub reset
 	{
 	my $self = shift;
-	
+
 	$$self[0] = 0;
 	}
 
 sub previous
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0] - 1;
 	$$self[0] %= $self->[1];
 
@@ -62,7 +62,7 @@ sub previous
 sub next
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0] + 1;
 	$$self[0] %= $self->[1];
 
@@ -86,7 +86,7 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 	print $cycle; # FFFFFF
 	print $cycle; # 000000
 	print $cycle; # FFFF00
-	print $cycle; # FFFFFF  back to the beginning    
+	print $cycle; # FFFFFF  back to the beginning
 
 	(tied $cycle)->reset;  # back to the beginning
 
