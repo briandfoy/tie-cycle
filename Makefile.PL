@@ -9,4 +9,6 @@ WriteMakefile(
     'MAN3PODS'      => {
     	'Cycle.pm'  => '$(INST_MAN3DIR)/Tie::Cycle.3',
     	},
+    	
+    'clean' => { FILES => 'Tie-Cycle-*' },
 );
