@@ -1,17 +1,8 @@
 # $Id$
 use ExtUtils::MakeMaker;
 
-sub ExtUtils::MM_Any::test_via_harness
-		{
-		my($self, $perl, $tests) = @_;
-
-		return qq|\t$perl "-MTest::Manifest" | .
-			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
-			qq|'\$(INST_ARCHLIB)')"\n|;
-		}
-
 WriteMakefile(
-    'NAME'		    => 'Tie::Cycle',
+    'NAME'		=> 'Tie::Cycle',
     'VERSION_FROM'	=> 'Cycle.pm',
  
     'PREREQ_PM'		=> {
@@ -26,4 +17,4 @@ WriteMakefile(
     	},
     	
     'clean' => { FILES => 'Tie-Cycle-*' },
-	);
+);
