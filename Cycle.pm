@@ -1,9 +1,10 @@
+# $Id$
 package Tie::Cycle;
-
-require 5.6.0;
 use strict;
 
-our $VERSION = 0.05;
+use vars qw( $VERSION );
+
+$VERSION = 1.0;
 
 sub TIESCALAR
 	{
@@ -131,9 +132,19 @@ You can peek at the next element if you like.
 
 =back
 
+=head1 SOURCE AVAILABILITY
+
+This source is part of a SourceForge project which always has the
+latest sources in CVS, as well as all of the previous releases.
+
+	https://sourceforge.net/projects/brian-d-foy/
+
+If, for some reason, I disappear from the world, one of the other
+members of the project can shepherd this module appropriately.
+
 =head1 AUTHOR
 
-brian d foy <bdfoy@cpan.org>.
+brian d foy, E<lt>bdfoy@cpan.orgE<gt>
 
 =head1 COPYRIGHT and LICENSE
 
