@@ -1,5 +1,9 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.06 - Tue Dec 17 14:19:37 2002
+	* cycle.t test was actually one from Tie::Toggle.  it is not
+	the right test.
+
 1.05 - Tue Dec 17 12:49:28 2002
 	* removed 'require 5.6.0' (perl5.8 complains about v-strings)
 	* beefed up distribution files
