@@ -98,8 +98,11 @@ You don't have to worry about any of this since the magic of
 tie does that for you.
 
 The tie takes an array reference as its third argument.  The tie
-should succeed unless the argument is not an array reference or
-the referenced array contains fewer than two elements.
+should succeed unless the argument is not an array reference.
+Previous versions required you to use an array that had more
+than one element (what's the pointing of looping otherwise?),
+but I've removed that restriction since the number of elements
+you want to use may change depending on the situation.
 
 During the tie, this module makes a shallow copy of the array
 reference.  If the array reference contains references, and those
@@ -146,7 +149,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000-2004, brian d foy, All rights reserved.
+Copyright 2000-2005, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
