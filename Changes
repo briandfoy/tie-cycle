@@ -1,5 +1,10 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.05 - Tue Dec 17 12:49:28 2002
+	* removed 'require 5.6.0' (perl5.8 complains about v-strings)
+	* beefed up distribution files
+	* no code changes --- no need to install if you already have this
+
 0.05 Wed Aug 14 18:15:01 CDT 2002
 	- added reset() method for underlying object so Andy
 	Lester can do HTML table tricks
