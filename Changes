@@ -1,5 +1,12 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.11 - Mon Jan  3 16:47:10 2005
+* Previously, this module refused to work unless the input array had
+more than one element.  What's the point of cycling otherwise?  I've
+removed that restriction, though, because I shouldn't be the one who
+gets to decide that.  A one element array should get a chance to act
+like any other array.  It just happens to have one element.
+
 1.09 - Thu Sep  2 19:56:41 2004
 * Just some distribution fixes.  No need to upgrade.
 
