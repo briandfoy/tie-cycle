@@ -1,0 +1,9 @@
+Revision history for Perl extension Tie::Cycle.
+
+0.02  Wed Jan 24 14:39:24 EST 2001
+	- minor doc fixes
+
+0.01  Sat Aug 12 23:33:30 2000
+	- original version; created by h2xs 1.20 with options
+		-AXn Tie::Cycle
+
