@@ -142,11 +142,11 @@ members of the project can shepherd this module appropriately.
 
 =head1 AUTHOR
 
-brian d foy, E<lt>bdfoy@cpan.orgE<gt>
+brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000, brian d foy, All rights reserved.
+Copyright 2004, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
