@@ -14,7 +14,7 @@ sub TIESCALAR
 	my @shallow_copy = map { $_ } @$list_ref;
 
 	return unless UNIVERSAL::isa( $list_ref, 'ARRAY' );
-	return unless @$list_ref > 1;
+	#return unless @$list_ref > 1;
 
 	my $self = [ 0, scalar @shallow_copy, \@shallow_copy ];
 
