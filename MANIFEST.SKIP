@@ -1,0 +1,9 @@
+.cvsignore
+.releaserc
+.lwpcookies
+Tie-Cycle-.*
+CVS
+blib
+.*bak
+Makefile$
+MANIFEST.SKIP
