@@ -1,5 +1,8 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.09 - Thu Sep  2 19:56:41 2004
+* Just some distribution fixes.  No need to upgrade.
+
 1.07 - Sat Jan 31 12:44:16 CST 2004
 	* No code changes.
 	* Removed dependencies on Test::Manifest, Test::Pod and
