@@ -2,9 +2,8 @@ package Tie::Cycle;
 
 require 5.6.0;
 use strict;
-use warnings;
 
-our $VERSION = 0.02;
+our $VERSION = 0.05;
 
 sub TIESCALAR
 	{
@@ -13,7 +12,7 @@ sub TIESCALAR
 
 	my @shallow_copy = map { $_ } @$list_ref;
 
-	return unless ref $list_ref eq ref [];
+	return unless UNIVERSAL::isa( $list_ref, 'ARRAY' );
 	return unless @$list_ref > 1;
 
 	my $self = [ 0, scalar @shallow_copy, \@shallow_copy ];
@@ -25,8 +24,8 @@ sub FETCH
 	{
 	my $self = shift;
 	
-        my $index = $$self[0]++;
-        $$self[0] %= $self->[1];
+	my $index = $$self[0]++;
+	$$self[0] %= $self->[1];
 
 	return $self->[2]->[ $index ];
 	}
@@ -36,10 +35,37 @@ sub STORE
 	my $self = shift;
 	my $list_ref = shift;
 
-        return unless ref $list_ref eq ref [];
-        return unless @$list_ref > 1;
+	return unless ref $list_ref eq ref [];
+	return unless @$list_ref > 1;
 
-        $self = [ 0, scalar @$list_ref, $list_ref ];
+	$self = [ 0, scalar @$list_ref, $list_ref ];
+	}
+	
+sub reset
+	{
+	my $self = shift;
+	
+	$$self[0] = 0;
+	}
+
+sub previous
+	{
+	my $self = shift;
+	
+	my $index = $$self[0] - 1;
+	$$self[0] %= $self->[1];
+
+	return $self->[2]->[ $index ];
+	}
+
+sub next
+	{
+	my $self = shift;
+	
+	my $index = $$self[0] + 1;
+	$$self[0] %= $self->[1];
+
+	return $self->[2]->[ $index ];
 	}
 
 "Tie::Cycle";
@@ -63,6 +89,8 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 	print $cycle; # FFFF00
 	print $cycle; # FFFFFF  back to the beginning    
 
+	(tied $cycle)->reset;  # back to the beginning
+	
 =head1 DESCRIPTION
 
 You use C<Tie::Cycle> to go through a list over and over again.
@@ -72,7 +100,7 @@ tie does that for you.
 
 The tie takes an array reference as its third argument.  The tie
 should succeed unless the argument is not an array reference or
-the referenced array contains less than two elements.
+the referenced array contains fewer than two elements.
 
 During the tie, this module makes a shallow copy of the array
 reference.  If the array reference contains references, and those
@@ -80,9 +108,32 @@ references are changed after the tie, the elements of the cycle
 will change as well. See the included test.pl script for an
 example of this effect.
 
+=head1 OBJECT METHODS
+
+You can call methods on the underlying object (which you access
+with tied().).
+
+=over 4
+
+=item reset
+
+Roll the iterator back to the starting position.  The next access
+will give the first element in the list.
+
+=item previous
+
+Give the previous element.  This does not affect the current position.
+
+=item next
+
+Give the next element.  This does not affect the current position.
+You can peek at the next element if you like.
+
+=back
+
 =head1 AUTHOR
 
-brian d foy <comdog@panix.com>.
+brian d foy <bdfoy@cpan.org>.
 
 =head1 COPYRIGHT and LICENSE
 

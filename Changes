@@ -1,5 +1,12 @@
 Revision history for Perl extension Tie::Cycle.
 
+0.05 Wed Aug 14 18:15:01 CDT 2002
+	- added reset() method for underlying object so Andy
+	Lester can do HTML table tricks
+	- since i was there, i added previous() and next()
+	methods so you can peek at values without affecting
+	the position.
+
 0.02  Wed Jan 24 14:39:24 EST 2001
 	- minor doc fixes
 
