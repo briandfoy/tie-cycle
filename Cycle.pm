@@ -113,7 +113,7 @@ example of this effect.
 =head1 OBJECT METHODS
 
 You can call methods on the underlying object (which you access
-with tied().).
+with tied() ).
 
 =over 4
 
