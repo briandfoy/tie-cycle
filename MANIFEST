@@ -5,5 +5,6 @@ Makefile.PL
 t/load.t
 t/cycle.t
 t/pod.t
+t/test_manifest
 META.yml                                 Module meta-data (added by MakeMaker)
 README
