@@ -1,5 +1,11 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.07 - Sat Jan 31 12:44:16 CST 2004
+	* No code changes.
+	* Removed dependencies on Test::Manifest, Test::Pod and
+	  File::Find::Rule.
+	* Fixed some warnings in tests.
+
 1.06 - Tue Dec 17 14:19:37 2002
 	* cycle.t test was actually one from Tie::Toggle.  it is not
 	the right test.
