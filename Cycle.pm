@@ -90,7 +90,7 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 	print $cycle; # FFFFFF  back to the beginning    
 
 	(tied $cycle)->reset;  # back to the beginning
-	
+
 =head1 DESCRIPTION
 
 You use C<Tie::Cycle> to go through a list over and over again.
