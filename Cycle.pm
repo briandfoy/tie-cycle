@@ -4,7 +4,7 @@ use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = 1.0;
+$VERSION = sprintf "%d.%02d", q$Revision$ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
