@@ -1,5 +1,8 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.12 - Tue Mar  8 17:30:50 2005
+	* Added POD coverage tests.  No need to upgrade
+
 1.11 - Mon Jan  3 16:47:10 2005
 * Previously, this module refused to work unless the input array had
 more than one element.  What's the point of cycling otherwise?  I've
