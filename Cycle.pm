@@ -135,7 +135,7 @@ You can peek at the next element if you like.
 This source is part of a SourceForge project which always has the
 latest sources in CVS, as well as all of the previous releases.
 
-	https://sourceforge.net/projects/brian-d-foy/
+	http://sourceforge.net/projects/brian-d-foy/
 
 If, for some reason, I disappear from the world, one of the other
 members of the project can shepherd this module appropriately.
@@ -146,7 +146,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2004, brian d foy, All rights reserved.
+Copyright 2000-2004, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
