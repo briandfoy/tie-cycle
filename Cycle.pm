@@ -73,8 +73,6 @@ sub next
 
 __END__
 
-=pod
-
 =head1 NAME
 
 Tie::Cycle - Cycle through a list of values via a scalar.
@@ -148,7 +146,7 @@ brian d foy, E<lt>bdfoy@cpan.orgE<gt>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000 by brian d foy.
+Copyright 2000, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
