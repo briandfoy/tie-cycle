@@ -2,7 +2,6 @@ Changes
 Cycle.pm
 MANIFEST
 Makefile.PL
+t/00.load.t
 t/cycle.t
-t/load.t
 t/pod.t
-t/test_manifest
