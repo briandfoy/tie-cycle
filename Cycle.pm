@@ -13,8 +13,7 @@ sub TIESCALAR
 
 	my @shallow_copy = map { $_ } @$list_ref;
 
-	return unless UNIVERSAL::isa( $list_ref, 'ARRAY' );
-	#return unless @$list_ref > 1;
+	return unless ref $list_ref eq ref [];
 
 	my $self = [ 0, scalar @shallow_copy, \@shallow_copy ];
 
@@ -33,11 +32,10 @@ sub FETCH
 
 sub STORE
 	{
-	my $self = shift;
+	my $self     = shift;
 	my $list_ref = shift;
 
 	return unless ref $list_ref eq ref [];
-	return unless @$list_ref > 1;
 
 	$self = [ 0, scalar @$list_ref, $list_ref ];
 	}
@@ -97,7 +95,7 @@ Once you get to the end of the list, you go back to the beginning.
 You don't have to worry about any of this since the magic of
 tie does that for you.
 
-The tie takes an array reference as its third argument.  The tie
+The tie takes an array reference as its third argument. The tie
 should succeed unless the argument is not an array reference.
 Previous versions required you to use an array that had more
 than one element (what's the pointing of looping otherwise?),
@@ -105,7 +103,7 @@ but I've removed that restriction since the number of elements
 you want to use may change depending on the situation.
 
 During the tie, this module makes a shallow copy of the array
-reference.  If the array reference contains references, and those
+reference. If the array reference contains references, and those
 references are changed after the tie, the elements of the cycle
 will change as well. See the included test.pl script for an
 example of this effect.
@@ -119,16 +117,16 @@ with tied() ).
 
 =item reset
 
-Roll the iterator back to the starting position.  The next access
+Roll the iterator back to the starting position. The next access
 will give the first element in the list.
 
 =item previous
 
-Give the previous element.  This does not affect the current position.
+Give the previous element. This does not affect the current position.
 
 =item next
 
-Give the next element.  This does not affect the current position.
+Give the next element. This does not affect the current position.
 You can peek at the next element if you like.
 
 =back
@@ -149,7 +147,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000-2005, brian d foy, All rights reserved.
+Copyright 2000-2006, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 

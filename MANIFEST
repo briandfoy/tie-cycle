@@ -1,10 +1,12 @@
 Changes
 Cycle.pm
-MANIFEST
 Makefile.PL
-t/load.t
-t/cycle.t
-t/pod.t
-t/test_manifest
-META.yml                                 Module meta-data (added by MakeMaker)
+MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
 README
+t/cycle.t
+t/load.t
+t/one.t
+t/pod.t
+t/pod_coverage.t
+t/test_manifest

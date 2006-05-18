@@ -4,6 +4,9 @@
 Tie-Cycle-.*
 CVS
 blib
-.*bak
+\.*bak
 Makefile$
 MANIFEST.SKIP
+\.DS_Store
+\.\#
+\.old
