@@ -6,6 +6,7 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'          => 'Tie::Cycle',
 	'VERSION_FROM'  => 'Cycle.pm',
+	'LICENSE'       => 'perl',
  
 	'PREREQ_PM'		=> {
 		'Test::More'       => '0',
