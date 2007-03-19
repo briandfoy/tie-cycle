@@ -1,10 +1,9 @@
 Changes
-Cycle.pm
+lib/Cycle.pm
 examples/README
 LICENSE
 Makefile.PL
 MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
 README
 t/cycle.t
 t/load.t
