@@ -1,5 +1,8 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.16 - Sat Oct 27 20:41:53 2007
+	* distro cleanups after moving from CVS to SVN
+
 1.15 - Sun Mar 18 23:06:51 2007
 	* Cleaning dist for new SVN repository
 	* No need to upgrade
