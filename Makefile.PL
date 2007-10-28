@@ -5,6 +5,7 @@ eval "use Test::Manifest 1.14";
 
 WriteMakefile(
 	'NAME'          => 'Tie::Cycle',
+	'ABSTRACT'      => 'Cycle through a list of values via a scalar',
 	'VERSION_FROM'  => 'lib/Cycle.pm',
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
