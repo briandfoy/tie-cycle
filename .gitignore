@@ -1,0 +1,6 @@
+Makefile
+Tie-*
+blib
+pm_to_blib
+*.bak
+*.old
