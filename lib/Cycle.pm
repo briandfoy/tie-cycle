@@ -4,8 +4,7 @@ use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = 1.16;
-#sprintf "%d.%02d", q$Revision$ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = '1.16';
 
 sub TIESCALAR
 	{
@@ -134,13 +133,9 @@ You can peek at the next element if you like.
 
 =head1 SOURCE AVAILABILITY
 
-This source is part of a SourceForge project which always has the
-latest sources in CVS, as well as all of the previous releases.
+This module is on Github:
 
-	http://sourceforge.net/projects/brian-d-foy/
-
-If, for some reason, I disappear from the world, one of the other
-members of the project can shepherd this module appropriately.
+	http://github.com/briandfoy/tie-cycle/tree/master
 
 =head1 AUTHOR
 
@@ -148,7 +143,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2000-2007, brian d foy, All rights reserved
+Copyright 2000-2009, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
 

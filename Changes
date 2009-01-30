@@ -19,14 +19,14 @@ Revision history for Perl extension Tie::Cycle.
 	* Added POD coverage tests.  No need to upgrade
 
 1.11 - Mon Jan  3 16:47:10 2005
-* Previously, this module refused to work unless the input array had
-more than one element.  What's the point of cycling otherwise?  I've
-removed that restriction, though, because I shouldn't be the one who
-gets to decide that.  A one element array should get a chance to act
-like any other array.  It just happens to have one element.
+	* Previously, this module refused to work unless the input array had
+	more than one element.  What's the point of cycling otherwise?  I've
+	removed that restriction, though, because I shouldn't be the one who
+	gets to decide that.  A one element array should get a chance to act
+	like any other array.  It just happens to have one element.
 
 1.09 - Thu Sep  2 19:56:41 2004
-* Just some distribution fixes.  No need to upgrade.
+	* Just some distribution fixes.  No need to upgrade.
 
 1.07 - Sat Jan 31 12:44:16 CST 2004
 	* No code changes.
@@ -44,16 +44,16 @@ like any other array.  It just happens to have one element.
 	* no code changes --- no need to install if you already have this
 
 0.05 Wed Aug 14 18:15:01 CDT 2002
-	- added reset() method for underlying object so Andy
+	* added reset() method for underlying object so Andy
 	Lester can do HTML table tricks
-	- since i was there, i added previous() and next()
+	* since I was there, I added previous() and next()
 	methods so you can peek at values without affecting
 	the position.
 
 0.02  Wed Jan 24 14:39:24 EST 2001
-	- minor doc fixes
+	* minor doc fixes
 
 0.01  Sat Aug 12 23:33:30 2000
-	- original version; created by h2xs 1.20 with options
+	* original version; created by h2xs 1.20 with options
 		-AXn Tie::Cycle
 
