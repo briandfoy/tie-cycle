@@ -1,9 +1,11 @@
 Changes
-lib/Cycle.pm
 examples/README
+lib/Tie/Cycle.pm
 LICENSE
 Makefile.PL
 MANIFEST
+MYMETA.json
+MYMETA.yml
 README
 t/cycle.t
 t/load.t

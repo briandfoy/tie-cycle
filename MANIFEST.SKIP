@@ -10,3 +10,5 @@ MANIFEST.SKIP
 \.DS_Store
 \.\#
 \.old
+\.git
+\.travis.yml
