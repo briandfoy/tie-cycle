@@ -25,8 +25,6 @@ WriteMakefile(
 				type => 'git',
 				url  => 'git@github.com:briandfoy/tie-cycle.git',
 				web  => 'https://github.com/briandfoy/tie-cycle',
-				}
-			}
 		},
 
 	);
