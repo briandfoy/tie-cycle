@@ -1,5 +1,10 @@
 Revision history for Perl extension Tie::Cycle.
 
+1.19 - Tue Aug 27 13:20:40 2013
+	* Update for modern usage, better code
+	* I use this as an example in Mastering Perl, so I shouldn't
+	leave embarrassing practices in the code. :)
+
 1.17 - Fri Jan 30 01:48:06 2009
 	* Updated the docs for the move to Github
 	* There aren't any code changes
