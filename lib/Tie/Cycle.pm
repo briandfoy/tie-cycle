@@ -1,71 +1,68 @@
-# $Id$
 package Tie::Cycle;
 use strict;
 
-use vars qw( $VERSION );
+our $VERSION = '1.18';
 
-$VERSION = '1.17';
+use Carp qw(carp);
 
-sub TIESCALAR
-	{
-	my $class    = shift;
-	my $list_ref = shift;
+use constant CURSOR_COL => 0;
+use constant COUNT_COL  => 1;
+use constant ITEM_COL   => 2;
 
+sub TIESCALAR {
+	my( $class, $list_ref ) = @_;
+	my $self = bless [], $class;
+
+	unless( $self->STORE( $list_ref ) ) {
+		carp "The argument to Tie::Cycle must be an array reference";
+		return;
+		}
+
+	return $self;
+	}
+
+sub FETCH {
+	my( $self ) = @_;
+
+	my $index = $self->[CURSOR_COL]++;
+	$self->[CURSOR_COL] %= $self->_count;
+
+	return $self->_item( $index );
+	}
+
+sub STORE {
+	my( $self, $list_ref ) = @_;
+	return unless ref $list_ref eq ref [];
 	my @shallow_copy = map { $_ } @$list_ref;
 
-	return unless ref $list_ref eq ref [];
-
-	my $self = [ 0, scalar @shallow_copy, \@shallow_copy ];
-
-	bless $self, $class;
+	$self->[CURSOR_COL] = 0;
+	$self->[COUNT_COL]  = scalar @shallow_copy;
+	$self->[ITEM_COL]   = \@shallow_copy;
 	}
 
-sub FETCH
-	{
-	my $self = shift;
+sub reset { $_[0]->[CURSOR_COL] = 0 }
 
-	my $index = $$self[0]++;
-	$$self[0] %= $self->[1];
+sub previous {
+	my( $self ) = @_;
 
-	return $self->[2]->[ $index ];
+	my $index = $self->_cursor - 1;
+	$self->[CURSOR_COL] %= $self->_count;
+
+	return $self->_item( $index );
 	}
 
-sub STORE
-	{
-	my $self     = shift;
-	my $list_ref = shift;
+sub next {
+	my( $self ) = @_;
 
-	return unless ref $list_ref eq ref [];
+	my $index = $self->_cursor + 1;
+	$self->[CURSOR_COL] %= $self->_count;
 
-	$self = [ 0, scalar @$list_ref, $list_ref ];
+	return $self->_item( $index );
 	}
 
-sub reset
-	{
-	my $self = shift;
-
-	$$self[0] = 0;
-	}
-
-sub previous
-	{
-	my $self = shift;
-
-	my $index = $$self[0] - 1;
-	$$self[0] %= $self->[1];
-
-	return $self->[2]->[ $index ];
-	}
-
-sub next
-	{
-	my $self = shift;
-
-	my $index = $$self[0] + 1;
-	$$self[0] %= $self->[1];
-
-	return $self->[2]->[ $index ];
-	}
+sub _cursor  { $_[0]->[CURSOR_COL] }
+sub _count   { $_[0]->[COUNT_COL] }
+sub _item    { $_[0]->[ITEM_COL][ $_[1] // $_[0]->_cursor ] }
 
 "Tie::Cycle";
 
@@ -77,14 +74,15 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 
 =head1 SYNOPSIS
 
-    use Tie::Cycle;
+	use v5.10.1;
+	use Tie::Cycle;
 
-    tie my $cycle, 'Tie::Cycle', [ qw( FFFFFF 000000 FFFF00 ) ];
+	tie my $cycle, 'Tie::Cycle', [ qw( FFFFFF 000000 FFFF00 ) ];
 
-	print $cycle; # FFFFFF
-	print $cycle; # 000000
-	print $cycle; # FFFF00
-	print $cycle; # FFFFFF  back to the beginning
+	say $cycle; # FFFFFF
+	say $cycle; # 000000
+	say $cycle; # FFFF00
+	say $cycle; # FFFFFF  back to the beginning
 
 	(tied $cycle)->reset;  # back to the beginning
 
@@ -105,13 +103,13 @@ you want to use may change depending on the situation.
 During the tie, this module makes a shallow copy of the array
 reference. If the array reference contains references, and those
 references are changed after the tie, the elements of the cycle
-will change as well. See the included test.pl script for an
+will change as well. See the included F<test.pl> script for an
 example of this effect.
 
 =head1 OBJECT METHODS
 
 You can call methods on the underlying object (which you access
-with tied() ).
+with C<tied()> ).
 
 =over 4
 
@@ -135,7 +133,7 @@ You can peek at the next element if you like.
 
 This module is on Github:
 
-	http://github.com/briandfoy/tie-cycle/tree/master
+	https://github.com/briandfoy/tie-cycle
 
 =head1 AUTHOR
 
@@ -143,7 +141,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2000-2009, brian d foy, All rights reserved
+Copyright 2000-2013, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
 
