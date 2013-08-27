@@ -1,5 +1,4 @@
-# $Id$
-use ExtUtils::MakeMaker;
+use ExtUtils::MakeMaker 6.46;
 
 require 5.008;
 
@@ -8,31 +7,26 @@ eval "use Test::Manifest 1.21";
 WriteMakefile(
 	'NAME'          => 'Tie::Cycle',
 	'ABSTRACT'      => 'Cycle through a list of values via a scalar',
-	'VERSION_FROM'  => 'lib/Cycle.pm',
+	'VERSION_FROM'  => 'lib/Tie/Cycle.pm',
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
 
-	'PM'            => {
-		'lib/Cycle.pm'=> '$(INST_LIBDIR)/Cycle.pm',
-		},
-
 	'PREREQ_PM'		=> {
-		'Test::More'       => '0',
-	},
-
-	'MAN3PODS'      => {
-		'lib/Cycle.pm'  => '$(INST_MAN3DIR)/Tie::Cycle.3',
+		'Test::More'       => '0.95',
+		'Carp'             => '0',
 		},
 
 	'clean' => { FILES => 'Tie-Cycle-*' },
 
-	(eval { ExtUtils::MakeMaker->VERSION(6.46) }
-		? (META_MERGE => {
-			resources => {
-				Repository => 'http://github.com/briandfoy/tie-cycle/tree/master'
+	'META_MERGE' => {
+        'meta-spec' => { version => 2 },
+		resources => {
+			repository => {
+				type => 'git',
+				url  => 'git@github.com:briandfoy/tie-cycle.git',
+				web  => 'https://github.com/briandfoy/tie-cycle',
 				}
-			})
-		: ()
-	),
+			}
+		},
 
-);
+	);
