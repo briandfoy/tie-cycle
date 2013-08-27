@@ -1,5 +1,5 @@
-# $Id$
+use Test::More 0.95;
 
-use Test::More tests => 1;
+use_ok( 'Tie::Cycle' ) or BAILOUT();
 
-use_ok( 'Tie::Cycle' );
+done_testing();
