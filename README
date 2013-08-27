@@ -1,5 +1,3 @@
-$Id$
-
 You can install this using in the usual Perl fashion
 
 	perl Makefile.PL
@@ -15,11 +13,11 @@ the file, you can read it with perldoc.
 If you want to read it before you install it, you can use
 perldoc directly on the module file.
 
-	perldoc Cycle.pm
+	perldoc lib/Tie/Cycle.pm
 	
-This module is also in CVS on SourceForge
+This module is also in GitHub
 
-	http://sourceforge.net/projects/brian-d-foy/
+	https://github.com/briandfoy/tie-cycle
 
 
 Enjoy, 
