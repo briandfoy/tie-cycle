@@ -1,7 +1,7 @@
 package Tie::Cycle;
 use strict;
 
-our $VERSION = '1.19';
+our $VERSION = '1.19_01';
 
 use Carp qw(carp);
 
@@ -62,11 +62,17 @@ sub next {
 
 sub _cursor  { $_[0]->[CURSOR_COL] }
 sub _count   { $_[0]->[COUNT_COL] }
-sub _item    { $_[0]->[ITEM_COL][ $_[1] // $_[0]->_cursor ] }
+sub _item    {
+	my( $self, $index ) = @_;
+	$index = defined $index ? $index : $self->_cursor;
+	$self->[ITEM_COL][ $index ] 
+	}
 
 "Tie::Cycle";
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
@@ -145,3 +151,4 @@ Copyright 2000-2013, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
 
+=cut
