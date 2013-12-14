@@ -4,8 +4,7 @@ lib/Tie/Cycle.pm
 LICENSE
 Makefile.PL
 MANIFEST
-MYMETA.json
-MYMETA.yml
+MANIFEST.SKIP
 README
 t/cycle.t
 t/load.t
