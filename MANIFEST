@@ -3,7 +3,7 @@ examples/README
 lib/Tie/Cycle.pm
 LICENSE
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 MANIFEST.SKIP
 README
 t/cycle.t
