@@ -1,7 +1,7 @@
 package Tie::Cycle;
 use strict;
 
-our $VERSION = '1.19_01';
+our $VERSION = '1.20';
 
 use Carp qw(carp);
 
@@ -147,7 +147,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2000-2013, brian d foy, All rights reserved
+Copyright 2000-2014, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
 
