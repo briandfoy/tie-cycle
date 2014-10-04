@@ -1,7 +1,7 @@
 package Tie::Cycle;
 use strict;
 
-our $VERSION = '1.19_01';
+our $VERSION = '1.21';
 
 use Carp qw(carp);
 
