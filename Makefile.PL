@@ -1,4 +1,4 @@
-use ExtUtils::MakeMaker 6.46;
+use ExtUtils::MakeMaker 6.64;
 
 require 5.008;
 
@@ -11,15 +11,22 @@ WriteMakefile(
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
 
-	'PREREQ_PM'		=> {
-		'Test::More'       => '0.95',
-		'Carp'             => '0',
+	'CONFIGURE_REQUIRES'  => {
+		'ExtUtils::MakeMaker' => '6.64',	
+		},
+
+	'PREREQ_PM' => {
+		'Carp' => '0',
+		},
+
+	'TEST_REQUIRES' => {
+		'Test::More' => '0.95',	
 		},
 
 	'clean' => { FILES => 'Tie-Cycle-*' },
 
 	'META_MERGE' => {
-        'meta-spec' => { version => 2 },
+		'meta-spec' => { version => 2 },
 		resources => {
 			repository => {
 				type => 'git',
