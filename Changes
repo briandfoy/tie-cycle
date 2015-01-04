@@ -1,4 +1,4 @@
-Revision history for Perl extension Tie::Cycle.
+Revision history for Perl module Tie::Cycle
 
 1.21 - Fri Oct  3 22:08:25 2014
 	* Update Makefile for better META data
