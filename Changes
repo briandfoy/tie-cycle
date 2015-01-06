@@ -1,77 +1,77 @@
 Revision history for Perl module Tie::Cycle
 
-1.21 - Fri Oct  3 22:08:25 2014
+1.21 - 2014-10-03
 	* Update Makefile for better META data
 
-1.20 - Sat Aug 16 17:28:38 2014
+1.20 - 2014-08-16
 	* Bump to user version
 
-1.19_01 - Mon Sep  2 10:51:42 2013
+1.19_01 - 2013-09-02
 	* Take out // (5.10 feature I used without thought) to restore
 	5.8 compatibility.
 
-1.19 - Tue Aug 27 13:20:40 2013
+1.19 - 2013-08-27
 	* Update for modern usage, better code
 	* I use this as an example in Mastering Perl, so I shouldn't
 	leave embarrassing practices in the code. :)
 
-1.17 - Fri Jan 30 01:48:06 2009
+1.17 - 2009-01-30
 	* Updated the docs for the move to Github
 	* There aren't any code changes
 
-1.16 - Sat Oct 27 20:41:53 2007
+1.16 - 2007-10-27
 	* distro cleanups after moving from CVS to SVN
 
-1.15 - Sun Mar 18 23:06:51 2007
+1.15 - 2007-03-18
 	* Cleaning dist for new SVN repository
 	* No need to upgrade
 
-1.14 - Tue Jan  9 22:57:17 2007
+1.14 - 2007-01-09
 	* updated copyright and license info
 	* no code changes, so no need to upgrade
 
-1.13 - Wed May 17 19:39:21 2006
+1.13 - 2006-05-17
 	* Minor cleanups in docs, copyright, and pod testing. No need to
 	upgrade.
 
-1.12 - Tue Mar  8 17:30:50 2005
+1.12 - 2005-03-08
 	* Added POD coverage tests.  No need to upgrade
 
-1.11 - Mon Jan  3 16:47:10 2005
+1.11 - 2005-01-03
 	* Previously, this module refused to work unless the input array had
 	more than one element.  What's the point of cycling otherwise?  I've
 	removed that restriction, though, because I shouldn't be the one who
 	gets to decide that.  A one element array should get a chance to act
 	like any other array.  It just happens to have one element.
 
-1.09 - Thu Sep  2 19:56:41 2004
+1.09 - 2004-09-02
 	* Just some distribution fixes.  No need to upgrade.
 
-1.07 - Sat Jan 31 12:44:16 CST 2004
+1.07 - 2004-01-31
 	* No code changes.
 	* Removed dependencies on Test::Manifest, Test::Pod and
 	  File::Find::Rule.
 	* Fixed some warnings in tests.
 
-1.06 - Tue Dec 17 14:19:37 2002
+1.06 - 2002-12-17
 	* cycle.t test was actually one from Tie::Toggle.  it is not
 	the right test.
 
-1.05 - Tue Dec 17 12:49:28 2002
+1.05 - 2002-12-17
 	* removed 'require 5.6.0' (perl5.8 complains about v-strings)
 	* beefed up distribution files
 	* no code changes --- no need to install if you already have this
 
-0.05 Wed Aug 14 18:15:01 CDT 2002
+0.05 - 2002-08-14
 	* added reset() method for underlying object so Andy
 	Lester can do HTML table tricks
 	* since I was there, I added previous() and next()
 	methods so you can peek at values without affecting
 	the position.
 
-0.02  Wed Jan 24 14:39:24 EST 2001
+0.02 - 2001-01-24
 	* minor doc fixes
 
-0.01  Sat Aug 12 23:33:30 2000
+0.01 - 2000-08-12
 	* original version; created by h2xs 1.20 with options -AXn Tie::Cycle
 
