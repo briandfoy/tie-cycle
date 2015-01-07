@@ -2,10 +2,13 @@ require 5.008;
 use strict;
 use warnings;
 
+my $github    = 'https://github.com/briandfoy/tie-cycle';
+my $main_file = 'lib/Tie/Cycle.pm';
+
 my %WriteMakefile = (
 	'NAME'          => 'Tie::Cycle',
-	'ABSTRACT'      => 'Cycle through a list of values via a scalar',
-	'VERSION_FROM'  => 'lib/Tie/Cycle.pm',
+	'ABSTRACT_FROM' => $main_file,
+	'VERSION_FROM'  => $main_file,
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
 
