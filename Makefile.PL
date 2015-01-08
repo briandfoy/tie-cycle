@@ -2,11 +2,14 @@ require 5.008;
 use strict;
 use warnings;
 
+use File::Spec::Functions qw(catfile);
+
+my $module    = 'Tie::Cycle';
 my $github    = 'https://github.com/briandfoy/tie-cycle';
-my $main_file = 'lib/Tie/Cycle.pm';
+my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
-	'NAME'          => 'Tie::Cycle',
+	'NAME'          => $module,
 	'ABSTRACT_FROM' => $main_file,
 	'VERSION_FROM'  => $main_file,
 	'LICENSE'       => 'perl',
