@@ -1,7 +1,7 @@
 package Tie::Cycle;
 use strict;
 
-our $VERSION = '1.21';
+our $VERSION = '1.22';
 
 use Carp qw(carp);
 
@@ -80,7 +80,7 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 
 =head1 SYNOPSIS
 
-	use v5.10.1;
+	use v5.10;
 	use Tie::Cycle;
 
 	tie my $cycle, 'Tie::Cycle', [ qw( FFFFFF 000000 FFFF00 ) ];
