@@ -25,8 +25,9 @@ name instead of the file location:
 
 	% perldoc Tie::Cycle
 
-You can read the documentation and inspect the meta data on one of the 
-CPAN web interfaces, such as L<CPAN Search|http://search.cpan.org/dist/Tie-Cycle> or 
+You can read the documentation and inspect the meta data on one of the
+CPAN web interfaces, such as L<CPAN
+Search|http://search.cpan.org/dist/Tie-Cycle> or
 L<MetaCPAN|http://www.metacpan.org/module/Tie::Cycle>:
 
 =over 4
