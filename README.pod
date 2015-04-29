@@ -4,10 +4,13 @@
 
 =head1 The Tie::Cycle module
 
-This is the I<README> for the L<Tie::Cycle> Perl module. You're probably 
-looking at this because you don't know where else to find what you're
-looking for. Read this once and you might never have to read one again 
-for any Perl module.
+This is the I<README> for the L<Tie::Cycle> Perl module. It allows
+you to create an array that continually cycles through its elements
+no matter what index you use.
+
+You're probably looking at this because you don't know where else to
+find what you're looking for. Read this once and you might never have
+to read one again for any Perl module.
 
 =head2 Documentation
 
@@ -22,8 +25,9 @@ name instead of the file location:
 
 	% perldoc Tie::Cycle
 
-You can read the documentation and inspect the meta data on one of the 
-CPAN web interfaces, such as L<CPAN Search|http://search.cpan.org/dist/Tie-Cycle> or 
+You can read the documentation and inspect the meta data on one of the
+CPAN web interfaces, such as L<CPAN
+Search|http://search.cpan.org/dist/Tie-Cycle> or
 L<MetaCPAN|http://www.metacpan.org/module/Tie::Cycle>:
 
 =over 4
