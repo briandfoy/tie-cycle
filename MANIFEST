@@ -1,5 +1,6 @@
 Changes
 examples/README
+INSTALL.SKIP
 lib/Tie/Cycle.pm
 LICENSE
 Makefile.PL
