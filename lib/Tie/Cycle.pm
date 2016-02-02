@@ -1,7 +1,7 @@
 package Tie::Cycle;
 use strict;
 
-our $VERSION = '1.22';
+our $VERSION = '1.221';
 
 use Carp qw(carp);
 
@@ -65,7 +65,7 @@ sub _count   { $_[0]->[COUNT_COL] }
 sub _item    {
 	my( $self, $index ) = @_;
 	$index = defined $index ? $index : $self->_cursor;
-	$self->[ITEM_COL][ $index ] 
+	$self->[ITEM_COL][ $index ]
 	}
 
 "Tie::Cycle";
