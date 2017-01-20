@@ -1,5 +1,9 @@
 Revision history for Perl module Tie::Cycle
 
+1.222 2017-01-20T11:30:37Z
+	* The module seems to have disappeared from CPAN, so I'm
+	re-uploading.
+
 1.221 2016-02-02T21:17:53Z
 	* Freshen distro
 
