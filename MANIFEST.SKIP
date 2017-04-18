@@ -58,7 +58,7 @@
 #!end included /usr/local/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MANIFEST.SKIP
 
 
-\.travis.yml
+\.travis\.yml
 \.appveyor\.yml
 \.releaserc
 \.gitignore
