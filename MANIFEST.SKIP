@@ -66,3 +66,6 @@ Changes\s\d
 \.gitignore
 \.github\b
 Tie-\.*
+\bMANIFEST\s\d
+\bChanges\s\d
+
