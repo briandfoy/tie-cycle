@@ -63,4 +63,5 @@
 \.releaserc
 \.lwpcookies
 \.gitignore
+\.github\b
 Tie-\.*
