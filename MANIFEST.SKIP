@@ -59,7 +59,6 @@
 
 MANIFEST\s\d
 Changes\s\d
-\.travis\.yml
 \.?appveyor.yml
 \.releaserc
 \.lwpcookies
