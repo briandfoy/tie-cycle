@@ -1,4 +1,3 @@
-cpan_user BDFOY
-sf_user comdog
-sf_group_id 36221
-sf_package_id 28818
+cpan_user     BDFOY
+skip_kwalitee 1
+skip_prereqs  1
