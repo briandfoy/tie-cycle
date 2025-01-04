@@ -147,7 +147,7 @@ brian d foy, C<< <briandfoy@pobox.com> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright © 2000-2024, brian d foy C<< <briandfoy@pobox.com> >>. All rights reserved.
+Copyright © 2000-2025, brian d foy C<< <briandfoy@pobox.com> >>. All rights reserved.
 This software is available under the Artistic License 2.0.
 
 =cut
