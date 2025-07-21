@@ -68,7 +68,7 @@ sub _item    {
 	$self->[ITEM_COL][ $index ]
 	}
 
-"Tie::Cycle";
+__PACKAGE__;
 
 __END__
 
