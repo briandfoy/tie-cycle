@@ -74,7 +74,7 @@ on:
     pull_request:
     # weekly build on the master branch just to see what CPAN is doing
     schedule:
-        - cron: "58 16 * * 0"
+        - cron: "54 4 * * 0"
 jobs:
     perl:
         environment: automated_testing
@@ -93,7 +93,7 @@ jobs:
         container:
             image: perl:${{ matrix.perl-version }}
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v5
             - name: git corrections
               run: |
                 git config --global --add safe.directory "$(pwd)"
