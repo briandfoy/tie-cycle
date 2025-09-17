@@ -74,7 +74,7 @@ on:
     pull_request:
     # weekly build on the master branch just to see what CPAN is doing
     schedule:
-        - cron: "37 9 * * 3"
+        - cron: "19 22 * * 3"
 jobs:
     perl:
         environment: automated_testing
